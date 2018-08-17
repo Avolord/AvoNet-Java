@@ -13,16 +13,16 @@ public class setup {
 		Image img = new Image("F:\\GitLab\\AvoNet\\mnist_train.csv", 28, 28);
 		for(int i=0;i<60000;i++) {
 			ImageData training = img.getImage();
-			ImgC.train(training.data, training.target);
+			ImgC.train(training.getData(), training.getTarget());
 		}
 		console.line(1);
 		console.log("Values of Training with "+60000+" iterations.");
 		AvoNet.elapsed(time);
 		
 		console.line(1);
-		console.log("The average Error was: "+ImgC.wholeError);
-		console.log("The minimum Error was: "+ImgC.minError);
-		console.log("The maximum Error was: "+ImgC.maxError);
+		console.log("The average Error was: "+ImgC.getWholeError());
+		console.log("The minimum Error was: "+ImgC.getMinError());
+		console.log("The maximum Error was: "+ImgC.getMaxError());
 	}
 
 }
