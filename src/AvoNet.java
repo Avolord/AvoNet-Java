@@ -1,21 +1,12 @@
 import java.util.Arrays;
 
 public class AvoNet {
-	private int outputs;
-	private int inputs;
-	private int[] hidden;
-	private int layers;
-	private int[] nodes;
+	private int outputs, inputs, layers, gen;
+	private int[] hidden, nodes;
 
-	private Matrix[] weights;
-	private Matrix[] bias;
+	private Matrix[] weights, bias;
 
-	private double lr;
-	private int gen;
-	private double maxError;
-	private double minError;
-	private double ErrorSum;
-	private double wholeError;
+	private double lr, maxError, minError, ErrorSum, wholeError;
 
 	AvoNet(int[] layerconfig, double learning_rate) {
 		this.initConfig(layerconfig);
