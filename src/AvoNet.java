@@ -25,7 +25,7 @@ public class AvoNet {
 		this.initInfo(learning_rate);
 	}
 
-	void initConfig(int[] conf) {
+	private void initConfig(int[] conf) {
 		outputs = conf[conf.length - 1];
 		inputs = conf[0];
 		layers = conf.length;

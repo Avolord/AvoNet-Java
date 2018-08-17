@@ -6,9 +6,7 @@ import java.io.IOException;
 public class Image {
 	private String path;
 	private BufferedReader data = null;
-	private int width;
-	private int height;
-	private int index = 0;
+	private int width, height, index = 0;
 
 	Image(String Path, int image_width, int image_height) {
 		path = Path;
@@ -89,9 +87,8 @@ public class Image {
 }
 
 class ImageData {
-	private double[] data;
+	private double[] data, target;
 	private int num;
-	private double[] target;
 
 	ImageData(double[] img_data, int number, double[] img_target) {
 		data = img_data.clone();
