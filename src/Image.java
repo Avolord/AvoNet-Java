@@ -21,7 +21,7 @@ public class Image {
 		height = image_height;	
 	}
 	
-	ImageData getImage() {
+	public ImageData getImage() {
 		String line = "";
 		String[] img_string = {};
 		double[] target_data = new double[10];
